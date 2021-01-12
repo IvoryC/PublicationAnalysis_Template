@@ -1,4 +1,4 @@
-# Publication Analysis
+# Publication Analysis Template
 
 This is a template for repositories that accompany a publication and encapsulate the analysis component.
 
