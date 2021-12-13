@@ -27,7 +27,7 @@ As you develop this project:
 When you submit your publication:
 
   * Make the repository public.
-  * If you are in the FodorLab, create a fork of your project under the [FodorLab organization](https://github.com/FodorLab). This serves as a central hub or research-compendia for the Fodor Lab.
+  * If you are in the FodorLab, create a fork of your project under the [FodorLab organization](https://github.com/FodorLab). This serves as a central hub for research-compendia for the Fodor Lab.
   * Create a tag / release to represent the exact version of the repository that corresponds to the publication. 
     * The tag should be something that can increment, such as "2020-JUN-06" or "version-1".  
     * Avoid using terms like "new" or "final".
@@ -92,14 +92,15 @@ _In the early development of your project, include a brief overview of the aim a
 
 # Whats NOT here
 
-_This repository should be the central hub of your project. BUT there are things that should not or cannot be stored in git; make sure there is some single central document that tracks all of those things.  It is convenient if that document is a README in this repository, perhaps a **Whats not here** header in this file.  A few examples might include:
-    * Names and contact info for people you will go to if you have questions or problems
-    * File locations for sequencing data
-    * Backup location for sequencing data
-    * metadata that links the data you are analyzing to individuals
-    * the source of data from related projects that are not yet published_
+_This repository should be the central hub of your project. BUT there are things that should not or cannot be stored in git; make sure there is some single central document that tracks all of those things.  It is convenient if that document is a README in this repository, perhaps a **Whats not here** header in this file.  A few examples might include:_
 
-_Location of raw sequences (during analysis): <UNCC hpc cluster> /research/fodorlab/data/<projectname>/raw_
+  * _Names and contact info for people you will go to if you have questions or problems_
+  * _File locations for sequencing data_
+  * _Backup location for sequencing data_
+  * _metadata that links the data you are analyzing to individuals_
+  * _the source of data from related projects that are not yet published_
+
+_Location of raw sequences (during analysis): <UNCC hpc cluster> /research/fodorlab/data/\<projectname\>/raw_
 
 _SRA ID: PRJ######_
 
@@ -118,7 +119,7 @@ _For the locations of project files not included in this repository, talk to Jan
 
 # Notes to contributors
 
-_Contributors could be other people in your group, or other groups, or it might be you of the future!  A handful of bullet points about how you want the project to evolve will help contributors work together.  Were you aiming to keep all modules very concise? Keep the whole runtime low? Make tags at particular landmarks?  If a correction is needed (maybe a typo, or maybe a fundamental change in a major calculation)--how should the change happen?  Should the reader make a pull request? Create an issue? Should they just contact you describing the issue and hope you fix it?  How should they contact you? Are there other projects that should be kept in sync with this?_
+_A handful of bullet points about how you want the project to evolve. Were you aiming to keep all modules very concise? Keep the whole runtime low? Make tags at particular landmarks?  If a correction is needed (maybe a typo, or maybe a fundamental change in a major calculation)--how should the change happen?  Should the reader make a pull request? Create an issue? Should they just contact you describing the issue and hope you fix it?  How should they contact you? Are there other projects that should be kept in sync with this?_
 
 _Optional - create subheadings such as **best practices** or **how to contribute to this project**_
 
