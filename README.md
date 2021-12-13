@@ -2,30 +2,42 @@
 
 This is a template for repositories that accompany a publication and encapsulate the analysis component.
 
-Not all projects will use this layout; and not all will have all of these componenets.
+Not all projects will use this layout; and not all will have all of these components.
+
+## Instructions
+
+Many of these instructions mention the vague concept of "other people".  Do not dismiss these points because you do not expect other people to contribute to your project.  It is always good to be prepared for other people to join you and the resources you make for "other people" will undoubtedly be beneficial to future-you returning to this project after a weekend or a year or a decade. So take an hour or two now to fill in the READMEs.
 
 After forking this template:
 
   * Review the permissions for your repository. Usually, you will make it private and invite any collaborators you need to share it with.
   * Edit this Readme file (and any others in the project) to reflect your project. Most sections have guidance in _italics_, you may choose to leave that in place through some of the development phase.
-  * Add the tag "research-compendium" to this responsitory on github.
+  * Add the tag "research-compendium" to this repository on github. 
   * Carefully review your metadata.  
     * DO NOT EVER put identifiable data into git.  
-    * If you not completely sure that a file ok to be public data, then DO NOT allow it to be commited in git. You can add that file name to your .gitignore, or use the NOT_IN_GIT string to keep it from being commited.
+    * When you are given metadata, double check that there is no way to identify any human participants.
+    * If you not completely sure that a file is ok to be public data, then DO NOT allow it to be committed in git. You can add that files name to your .gitignore, or use the NOT_IN_GIT string in the file name, or keep it out of the folder all together to keep it from being committed.
+  * Replace the example(s) in `assembledFigures/` and `analysis/scripts/review.Rmd` with something that comes from this project--even if it is something entirely trivial, make it something that is derived from _your project_.  If you have any difficulty with editing and running the review module, seek help early.
+  
+As you develop this project:
+
+  * Update the READMEs frequently.
+  * Update the analysis/scripts/Review.Rmd module frequently.
 
 When you submit your publication:
 
   * Make the repository public.
   * If you are in the FodorLab, create a fork of your project under the [FodorLab organization](https://github.com/FodorLab). This serves as a central hub or research-compendia for the Fodor Lab.
   * Create a tag / release to represent the exact version of the repository that corresponds to the publication. 
-    * The tag should be something that can incriment, such as the date or "version-1".  
+    * The tag should be something that can increment, such as "2020-JUN-06" or "version-1".  
     * Avoid using terms like "new" or "final".
     * The same commit that is tagged as "version-3" can also be tagged as "accepted-at-nature-medicine".
-  * Add a URL to the repository in your publication.  Recommended: use the URL that points to the FodorLab fork. 
-  * Update the top level Readme file with the publication title, official abstract, and "submitted"
+  * Add a URL to the repository in your publication.  If there are multiple forks, point to the one that is most likely to be maintained/updated in the future.
+  * Update the top level Readme file with the publication title, finalized abstract, and note that it is submitted (or published).
 
 NOT_IN_GIT
 The .gitignore in this repository is configured to ignore any files that contain NOT_IN_GIT in the folder or file name.  There are several reasons you may store a file in your local repository folder without wanting to commit it. Including this string in folder or file names makes it very clear that these files are not under git version control.
+
 
 **Everything above this line is for the template only. Delete it when/before you submit your publication.**
 ---
@@ -34,7 +46,7 @@ The .gitignore in this repository is configured to ignore any files that contain
 
 ## AssembledFigures
 
-_The (near) final publication figures.  These often include manual annotations.  It is recommented to include the corresponding figure legend as a readme or as individual files.  Resist the temptation to put figure numbers in the file names until you actually hit the submit button. Use concise but meaningful names throughout the development of the manuscript._
+_The (near) final publication figures.  These often include manual annotations.  It is recommended to include the corresponding figure legend as a readme or as individual files.  Resist the temptation to put figure numbers in the file names until you actually hit the submit button. Use concise but meaningful names throughout the development of the manuscript._
 
 
 
@@ -43,9 +55,6 @@ _The (near) final publication figures.  These often include manual annotations. 
 _The top level of the repository has info like "What was the research question" and "What was the answer". This folder covers "How did you come to that answer"_
 
 
-## Sequence Processing
-
-_Sometimes called "PreProcessing". Technically this is part of the Analsysis, but 
 
 ## Output
 
@@ -69,9 +78,49 @@ _In this end, this will line up with the author list of the publication. EARLY o
 
 
 
+## Status
+
+_later: submitted, published, archived (not published)_
+
+In progress.
+
 ## abstract
 
-_In the early develeopment of your project, include a brief overview of the aim and design of your project.  Once you have written a formal abstract, put that here._
+_In the early development of your project, include a brief overview of the aim and design of your project.  Once you have written a formal abstract, put that here._
+
+
+
+# Whats NOT here
+
+_This repository should be the central hub of your project. BUT there are things that should not or cannot be stored in git; make sure there is some single central document that tracks all of those things.  It is convenient if that document is a README in this repository, perhaps a **Whats not here** header in this file.  A few examples might include:
+    * Names and contact info for people you will go to if you have questions or problems
+    * File locations for sequencing data
+    * Backup location for sequencing data
+    * metadata that links the data you are analyzing to individuals
+    * the source of data from related projects that are not yet published_
+
+_Location of raw sequences (during analysis): <UNCC hpc cluster> /research/fodorlab/data/<projectname>/raw_
+
+_SRA ID: PRJ######_
+
+_Data backup location: Hard drive #8 under Jane's desk._
+
+_The metadata file patient_outcomes_NOT_IN_GIT.xlsx is not available to the public.  The internal master copy is stored on Jane's laptop /Users/jane/Documents/thesis2020/chapter3/metadata_
+
+_The slides to present this project are in Jane's Google Drive folder School/thesis/talks/_
+
+_The in-progress figures and manuscripts for this project are in a Google Drive folder called "Generic_Analysis_2020" (talk to Jane for access)._
+
+_**Often, even the location of these things is too risky to include in git.  Store your complete list of resources somewhere appropriately secure, and be sure to include the URL for this repository on that list.**_
+
+_For the locations of project files not included in this repository, talk to Jane Exampleton._
+
+
+# Notes to contributors
+
+_Contributors could be other people in your group, or other groups, or it might be you of the future!  A handful of bullet points about how you want the project to evolve will help contributors work together.  Were you aiming to keep all modules very concise? Keep the whole runtime low? Make tags at particular landmarks?  If a correction is needed (maybe a typo, or maybe a fundamental change in a major calculation)--how should the change happen?  Should the reader make a pull request? Create an issue? Should they just contact you describing the issue and hope you fix it?  How should they contact you? Are there other projects that should be kept in sync with this?_
+
+_Optional - create subheadings such as **best practices** or **how to contribute to this project**_
 
 
 

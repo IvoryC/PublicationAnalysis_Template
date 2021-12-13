@@ -1,0 +1,140 @@
+---
+title: "Review Figures"
+author: "your name here"
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 3
+  html_document:
+    toc: true
+    toc_depth: 3
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newpage
+# Review Reproduced Figures
+
+This is a side-by-side comparison between figures as they appear in the published work, and the corresponding figures that were re-generated on:                          
+` `r date()` `
+
+#### This document aims to:              
+
+ * Create an easy way for the authors to check that the annotaed figures align with the output of the script, even throughout an iterative review process that may prompt edits at multiple stages of the pipeline.
+ * Make the pipeline transparent to readers.
+ * Facilitate reproducing the computational components of this work.
+
+**The old and new may NOT be bit-for-bit identical.**  There may some random seed that is used in a training step, or a difference in font libraries; graphics parameters like resolution or image size may be different, the publication may have some manually curated labels that the script-generated image does not.  There are many acceptable reasons why a reproduction of a figure may not be identical to the original; **but we expect that the core conclusion from the original will hold for the reproduction.**
+  
+
+File Paths:              
+
+To be portable, this document is written with relative file paths.
+```{r}
+pipeRoot <- dirname(dirname(getwd()))
+origPanels = getwd()
+```
+
+To be consice, file paths within the pipeline folder are shown without the pipeline folder path.
+```{r}
+# Display the pipeline folder path.
+showPipelineRoot <- function(){
+    # in docker, the $BLJ_PROJ folder is mapped to 'mnt/efs/pipelines'
+    return(gsub("/mnt/efs/pipelines", "<BLJ_PROJ folder>", pipeRoot))
+}
+
+# Display the path to a pipeline file within the pipeline folder as the root.
+showPipelineFile <- function(filePath){
+    return(gsub(paste0(pipeRoot,"/"), "", filePath))
+}
+```
+
+The re-produced images are taken from modules under this pipeline folder:               
+``r showPipelineRoot()``
+
+This document expects that reference images are provided as recources, and can be found in:
+``r showPipelineFile(origPanels)``
+
+\newpage
+
+These are the functions to find files within the pipeline folder.
+```{r}
+# Find a file within the pipeline folder.
+getFilePath <- function(module, file){
+  # module - the alias for the module. this the folder name EXCLUDING the #_ at the start.
+  # file - name of the file in the output folder.  If there are subfolders use format: "sub/dir/file"
+  modulePath = dir(pipeRoot, pattern=module, full.names=TRUE)
+  #if (length(modulePath)==0) modulePath = paste0("<", module, " module>")
+  outputDir = file.path(modulePath, "output")
+  
+  outputFile = file.path(outputDir, file)
+  if (!file.exists(outputFile)){
+    message("Failed to find expected file: ")
+    message(showPipelineFile(outputFile))
+  }
+  return(outputFile)
+}
+
+# Create an alternative image that will be shown in place of any image that cannot be found.
+# Use this with include_graphics to avoid a failure on account of any one image missing.
+altPath = file.path(dirname(getwd()), "temp", "altImage.pdf")
+pdf(altPath, width = 2, height = 2)
+par(mai=c(.1,.1,.1,.1)); plot.new()
+text(.5,.5,"missing image", xpd=T, adj=.5); box()
+dev.off()
+
+# replace any file paths that can't be found with the path to the alt image pdf.
+ifExists <- function(path){
+  # path - vector of file paths
+  nonExisting = which(!file.exists(path))
+  path[nonExisting] = altPath
+  return(path)
+}
+```
+
+
+\newpage
+## Figure N - Petal
+
+_To do - insert copy of publication figure_
+
+```{r out.width="50%"}
+pet = getFilePath("Petal", "petals.pdf")
+include_graphics(ifExists(pet))
+```
+
+```{r out.width="50%", out.extra="page=2"}
+knitr::include_graphics(ifExists(pet))
+```
+
+These images are in the pipeline result file:             
+``r showPipelineFile(pet)`` 
+
+\newpage
+## Figure 1 - Sepal
+
+### official figure
+
+```{r out.width="90%"}
+fig1 = file.path(origPanels, "FigureN-sepals_example.pdf")
+f1legend = file.path(origPanels, "FigureN-sepals_example-legend.md")
+include_graphics(ifExists(fig1))
+```
+
+`r readLines(f1legend)`
+
+### current figure
+
+```{r Fig1, out.width="90%"}
+sep = getFilePath("Sepal", "sepals.pdf")
+include_graphics(ifExists(sep))
+```
+
+\newpage
+```{r}
+sessionInfo()
+```
