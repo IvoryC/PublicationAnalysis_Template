@@ -43,6 +43,29 @@ The .gitignore in this repository is configured to ignore any files that contain
 **Everything above this line is for the template only. Delete it when/before you submit your publication.**
 ---
 
+# Publication
+
+## Title
+
+_When applicable, include a link to the published manuscript_
+
+
+
+**link**: (not yet published)
+
+## Authors / contributors
+
+_In this end, this will line up with the author list of the publication. EARLY on, assemble a list of people involved in the project, potentially including email addresses (in cryptic form: name at mail dot com)_
+
+
+
+## abstract
+
+_In the early development of your project, include a brief overview of the aim and design of your project.  Once you have written a formal abstract, put that here._
+
+
+
+
 # Whats here
 
 ## AssembledFigures
@@ -63,27 +86,6 @@ _Selected subset of pipeline output that would be immediately relevant to the re
 
 _For projects that use BioLockJ, the final completed pipeline can stored here. Many files may be deleted (including many outputs) but the structure of modules' outputs, logs and scripts provides organization._
 
-
-
-# Publication
-
-## Title
-
-_When applicable, include a link to the published manuscript_
-
-
-
-**link**: (not yet published)
-
-## Authors / contributors
-
-_In this end, this will line up with the author list of the publication. EARLY on, assemble a list of people involved in the project, potentially including email addresses (in cryptic form: name at mail dot com)_
-
-
-
-## abstract
-
-_In the early development of your project, include a brief overview of the aim and design of your project.  Once you have written a formal abstract, put that here._
 
 
 
