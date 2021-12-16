@@ -14,7 +14,8 @@ After forking this template:
   * Edit this Readme file (and any others in the project) to reflect your project. Most sections have guidance in _italics_, you may choose to leave that in place through some of the development phase.
   * Add the tag "research-compendium" to this repository on github. 
   * Carefully review your metadata.  
-    * DO NOT EVER put identifiable data into git.  
+    * **DO NOT EVER put identifiable data into git.**  
+    * **Make sure the lead PI has given permission before any metadata is commited to git.**  Start by asking Dr. Fodor.
     * When you are given metadata, double check that there is no way to identify any human participants.
     * If you not completely sure that a file is ok to be public data, then DO NOT allow it to be committed in git. You can add that files name to your .gitignore, or use the NOT_IN_GIT string in the file name, or keep it out of the folder all together to keep it from being committed.
   * Replace the example(s) in `assembledFigures/` and `analysis/scripts/review.Rmd` with something that comes from this project--even if it is something entirely trivial, make it something that is derived from _your project_.  If you have any difficulty with editing and running the review module, seek help early.
@@ -72,17 +73,13 @@ _When applicable, include a link to the published manuscript_
 
 
 
+**link**: (not yet published)
+
 ## Authors / contributors
 
 _In this end, this will line up with the author list of the publication. EARLY on, assemble a list of people involved in the project, potentially including email addresses (in cryptic form: name at mail dot com)_
 
 
-
-## Status
-
-_later: submitted, published, archived (not published)_
-
-In progress.
 
 ## abstract
 
@@ -131,6 +128,8 @@ _It is highly recommended that you add a license. This communicates to others if
 
 _The MIT License is short and simple and the easiest to include here as a default.  You may decide the [BPLv3](https://choosealicense.com/licenses/gpl-3.0/) license, or some other license, is better for your project.  Choose whatever  you want, but don't use 'no license' out of laziness._
 
+This lecense applies to the code in this repository.  The related publication and its components (such as figures and tables) are subject to the licencing and/or copywrite policies of the publisher.
+ 
 MIT License
 
 Copyright (c) [year] [fullname]
