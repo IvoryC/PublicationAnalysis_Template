@@ -68,25 +68,22 @@ _In the early development of your project, include a brief overview of the aim a
 
 # Whats here
 
-## AssembledFigures
-
-_The (near) final publication figures.  These often include manual annotations.  It is recommended to include the corresponding figure legend as a readme or as individual files.  Resist the temptation to put figure numbers in the file names until you actually hit the submit button. Use concise but meaningful names throughout the development of the manuscript._
-
-
-
-## Analysis
+## analysis
 
 _The top level of the repository has info like "What was the research question" and "What was the answer". This folder covers "How did you come to that answer"_
 
+Scripts and related resources documenting how the data was transformed into results.
 
 
-## Output
+## results
 
 _Selected subset of pipeline output that would be immediately relevant to the reader. Provide the reader with as much as they could reasonably be interested in, but avoid including large files in a git repository._
 
+_The (near) final publication figures and tables. These often include manual annotations.  It is recommended to include the corresponding figure legend as a readme or as individual files.  Resist the temptation to put figure numbers in the file names until you actually hit the submit button. Use concise but meaningful names throughout the development of the manuscript._
+
+_Sometimes components of the text if copyright from the publisher will allow it._
+
 _For projects that use BioLockJ, the final completed pipeline can stored here. Many files may be deleted (including many outputs) but the structure of modules' outputs, logs and scripts provides organization._
-
-
 
 
 # Whats NOT here
@@ -130,11 +127,11 @@ _It is highly recommended that you add a license. This communicates to others if
 
 _The MIT License is short and simple and the easiest to include here as a default.  You may decide the [BPLv3](https://choosealicense.com/licenses/gpl-3.0/) license, or some other license, is better for your project.  Choose whatever  you want, but don't use 'no license' out of laziness._
 
-This lecense applies to the code in this repository.  The related publication and its components (such as figures and tables) are subject to the licencing and/or copywrite policies of the publisher.
+This license applies to the code in this repository.  The related publication and its components (such as figures and tables) are subject to the licensing and/or copyright policies of the publisher.
  
 MIT License
 
-Copyright (c) [year] [fullname]
+Copyright (c) [year] [full name]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
